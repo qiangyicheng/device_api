@@ -8,6 +8,20 @@ project (device_api)
 add_library(${PROJECT_NAME} INTERFACE)
 target_include_directories(${PROJECT_NAME} INTERFACE include/)
 
+include(CheckLanguage)
+check_language(CUDA)
+if(CMAKE_CUDA_COMPILER)
+    target_compile_definitions(${PROJECT_NAME} INTERFACE DAPI_GPU_API_CUDA)
+else()
+    find_package(hip QUIET)
+    if(hip_FOUND)
+        target_compile_definitions(${PROJECT_NAME} INTERFACE DAPI_GPU_API_HIP)
+    else()
+        target_compile_definitions(${PROJECT_NAME} INTERFACE DAPI_GPU_API_CUDA)
+        message(WARNING "Both CUDA and HIP are not found. By default device_api will use CUDA interface.")
+    endif()
+endif()
+
 include(FetchContent)
 
 FetchContent_Declare(HIPIFY
