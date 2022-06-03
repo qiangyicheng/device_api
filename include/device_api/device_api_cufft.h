@@ -5,6 +5,9 @@
 
 #ifdef DAPI_GPU_API_CUDA
 
+#include <cuda_runtime.h>
+#include <cufft.h>
+#include <cufftXt.h>
 #define DAPI_CUFFT_ALLOC_FAILED CUFFT_ALLOC_FAILED
 #define DAPI_CUFFT_C2C CUFFT_C2C
 #define DAPI_CUFFT_C2R CUFFT_C2R
@@ -98,6 +101,9 @@
 
 #ifdef DAPI_GPU_API_HIP
 
+#include <hip/hip_runtime.h>
+#include <hipfft.h>
+#include <hipfftXt.h>
 #define DAPI_CUFFT_ALLOC_FAILED HIPFFT_ALLOC_FAILED
 #define DAPI_CUFFT_C2C HIPFFT_C2C
 #define DAPI_CUFFT_C2R HIPFFT_C2R

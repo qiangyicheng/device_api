@@ -37,6 +37,9 @@ if(ENABLE_WOLFRAM_SCRIPT)
             ${CURRENT_GENERATOR_DIR}/${CURRENT_TARGET_NAME}.wls
             ${hipify_SOURCE_DIR}/doc/markdown
             ${CMAKE_CURRENT_SOURCE_DIR}
+            11.5
+            4.3.0
+            DAPI
         DEPENDS 
             ${CURRENT_GENERATOR_DIR}/${CURRENT_TARGET_NAME}.wls
         WORKING_DIRECTORY
@@ -58,5 +61,6 @@ target_sources(${PROJECT_NAME}
     INTERFACE
     device_api_cub.h
     device_api_helper.h
+    device_api_cooperative_groups.h
     #device_api_cublas.h ## not included, since the dependency is set by add_dependencies before (which has a private scope)
 )

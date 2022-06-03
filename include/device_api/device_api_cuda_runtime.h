@@ -5,6 +5,8 @@
 
 #ifdef DAPI_GPU_API_CUDA
 
+#include <cuda_runtime.h>
+#include <device_launch_parameters.h>
 #define dapi_cudaChooseDevice cudaChooseDevice
 #define dapi_cudaDeviceGetAttribute cudaDeviceGetAttribute
 #define dapi_cudaDeviceGetByPCIBusId cudaDeviceGetByPCIBusId
@@ -263,7 +265,6 @@
 #define dapi_cudaDevAttrMaxThreadsPerBlock cudaDevAttrMaxThreadsPerBlock
 #define dapi_cudaDevAttrMaxThreadsPerMultiProcessor cudaDevAttrMaxThreadsPerMultiProcessor
 #define dapi_cudaDevAttrMemoryClockRate cudaDevAttrMemoryClockRate
-#define dapi_cudaDevAttrMultiGpuBoardGroupID cudaDevAttrMultiGpuBoardGroupID
 #define dapi_cudaDevAttrMultiProcessorCount cudaDevAttrMultiProcessorCount
 #define dapi_cudaDevAttrPageableMemoryAccess cudaDevAttrPageableMemoryAccess
 #define dapi_cudaDevAttrPageableMemoryAccessUsesHostPageTables cudaDevAttrPageableMemoryAccessUsesHostPageTables
@@ -544,6 +545,7 @@
 #define dapi_cudaTextureType3D cudaTextureType3D
 #define dapi_cudaTextureTypeCubemap cudaTextureTypeCubemap
 #define dapi_cudaTextureTypeCubemapLayered cudaTextureTypeCubemapLayered
+#define dapi_surfaceReference surfaceReference
 #define dapi_cudaConfigureCall cudaConfigureCall
 #define dapi_cudaLaunch cudaLaunch
 #define dapi_cudaSetupArgument cudaSetupArgument
@@ -553,6 +555,7 @@
 
 #ifdef DAPI_GPU_API_HIP
 
+#include <hip/hip_runtime.h>
 #define dapi_cudaChooseDevice hipChooseDevice
 #define dapi_cudaDeviceGetAttribute hipDeviceGetAttribute
 #define dapi_cudaDeviceGetByPCIBusId hipDeviceGetByPCIBusId
@@ -811,7 +814,6 @@
 #define dapi_cudaDevAttrMaxThreadsPerBlock hipDeviceAttributeMaxThreadsPerBlock
 #define dapi_cudaDevAttrMaxThreadsPerMultiProcessor hipDeviceAttributeMaxThreadsPerMultiProcessor
 #define dapi_cudaDevAttrMemoryClockRate hipDeviceAttributeMemoryClockRate
-#define dapi_cudaDevAttrMultiGpuBoardGroupID hipDeviceAttributeMultiGpuBoardGroupID
 #define dapi_cudaDevAttrMultiProcessorCount hipDeviceAttributeMultiprocessorCount
 #define dapi_cudaDevAttrPageableMemoryAccess hipDeviceAttributePageableMemoryAccess
 #define dapi_cudaDevAttrPageableMemoryAccessUsesHostPageTables hipDeviceAttributePageableMemoryAccessUsesHostPageTables
@@ -1092,6 +1094,7 @@
 #define dapi_cudaTextureType3D hipTextureType3D
 #define dapi_cudaTextureTypeCubemap hipTextureTypeCubemap
 #define dapi_cudaTextureTypeCubemapLayered hipTextureTypeCubemapLayered
+#define dapi_surfaceReference surfaceReference
 #define dapi_cudaConfigureCall hipConfigureCall
 #define dapi_cudaLaunch hipLaunchByPtr
 #define dapi_cudaSetupArgument hipSetupArgument

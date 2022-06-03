@@ -5,6 +5,7 @@
 
 #ifdef DAPI_GPU_API_CUDA
 
+#include <cuda.h>
 #define DAPI_CUDA_ARRAY3D_CUBEMAP CUDA_ARRAY3D_CUBEMAP
 #define DAPI_CUDA_ARRAY3D_DESCRIPTOR CUDA_ARRAY3D_DESCRIPTOR
 #define DAPI_CUDA_ARRAY3D_DESCRIPTOR_st CUDA_ARRAY3D_DESCRIPTOR_st
@@ -394,6 +395,9 @@
 #define DAPI_CUaddress_mode CUaddress_mode
 #define DAPI_CUaddress_mode_enum CUaddress_mode_enum
 #define DAPI_CUarray CUarray
+#define DAPI_CUarrayMapInfo CUarrayMapInfo
+#define DAPI_CUarrayMapInfo_st CUarrayMapInfo_st
+#define DAPI_CUarrayMapInfo_v1 CUarrayMapInfo_v1
 #define DAPI_CUarray_format CUarray_format
 #define DAPI_CUarray_format_enum CUarray_format_enum
 #define DAPI_CUarray_st CUarray_st
@@ -682,6 +686,7 @@
 
 #ifdef DAPI_GPU_API_HIP
 
+#include <hip/hip_runtime.h>
 #define DAPI_CUDA_ARRAY3D_CUBEMAP hipArrayCubemap
 #define DAPI_CUDA_ARRAY3D_DESCRIPTOR HIP_ARRAY3D_DESCRIPTOR
 #define DAPI_CUDA_ARRAY3D_DESCRIPTOR_st HIP_ARRAY3D_DESCRIPTOR
@@ -1071,6 +1076,9 @@
 #define DAPI_CUaddress_mode HIPaddress_mode
 #define DAPI_CUaddress_mode_enum HIPaddress_mode_enum
 #define DAPI_CUarray hipArray_t
+#define DAPI_CUarrayMapInfo hipArrayMapInfo
+#define DAPI_CUarrayMapInfo_st hipArrayMapInfo
+#define DAPI_CUarrayMapInfo_v1 hipArrayMapInfo
 #define DAPI_CUarray_format hipArray_Format
 #define DAPI_CUarray_format_enum hipArray_Format
 #define DAPI_CUarray_st hipArray

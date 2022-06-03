@@ -5,6 +5,8 @@
 
 #ifdef DAPI_GPU_API_CUDA
 
+#include <cuda_runtime.h>
+#include <cusparse.h>
 #define DAPI_CUSPARSE_ACTION_NUMERIC CUSPARSE_ACTION_NUMERIC
 #define DAPI_CUSPARSE_ACTION_SYMBOLIC CUSPARSE_ACTION_SYMBOLIC
 #define DAPI_CUSPARSE_COOMM_ALG1 CUSPARSE_COOMM_ALG1
@@ -69,6 +71,15 @@
 #define DAPI_CUSPARSE_STATUS_NOT_SUPPORTED CUSPARSE_STATUS_NOT_SUPPORTED
 #define DAPI_CUSPARSE_STATUS_SUCCESS CUSPARSE_STATUS_SUCCESS
 #define DAPI_CUSPARSE_STATUS_ZERO_PIVOT CUSPARSE_STATUS_ZERO_PIVOT
+#define dapi_bsric02Info_t bsric02Info_t
+#define dapi_bsrilu02Info_t bsrilu02Info_t
+#define dapi_bsrsv2Info_t bsrsv2Info_t
+#define dapi_csrgemm2Info_t csrgemm2Info_t
+#define dapi_csrilu02Info_t csrilu02Info_t
+#define dapi_csrsm2Info_t csrsm2Info_t
+#define dapi_csrsv2Info_t csrsv2Info_t
+#define dapi_csru2csrInfo csru2csrInfo
+#define dapi_csru2csrInfo_t csru2csrInfo_t
 #define dapi_cusparseAction_t cusparseAction_t
 #define dapi_cusparseDiagType_t cusparseDiagType_t
 #define dapi_cusparseDirection_t cusparseDirection_t
@@ -98,6 +109,7 @@
 #define dapi_cusparseSpVecDescr_t cusparseSpVecDescr_t
 #define dapi_cusparseSparseToDenseAlg_t cusparseSparseToDenseAlg_t
 #define dapi_cusparseStatus_t cusparseStatus_t
+#define dapi_pruneInfo_t pruneInfo_t
 #define dapi_cusparseCreate cusparseCreate
 #define dapi_cusparseDestroy cusparseDestroy
 #define dapi_cusparseGetPointerMode cusparseGetPointerMode
@@ -542,6 +554,8 @@
 
 #ifdef DAPI_GPU_API_HIP
 
+#include <hip/hip_runtime.h>
+#include <hipsparse.h>
 #define DAPI_CUSPARSE_ACTION_NUMERIC HIPSPARSE_ACTION_NUMERIC
 #define DAPI_CUSPARSE_ACTION_SYMBOLIC HIPSPARSE_ACTION_SYMBOLIC
 #define DAPI_CUSPARSE_COOMM_ALG1 HIPSPARSE_COOMM_ALG1
@@ -606,6 +620,15 @@
 #define DAPI_CUSPARSE_STATUS_NOT_SUPPORTED HIPSPARSE_STATUS_NOT_SUPPORTED
 #define DAPI_CUSPARSE_STATUS_SUCCESS HIPSPARSE_STATUS_SUCCESS
 #define DAPI_CUSPARSE_STATUS_ZERO_PIVOT HIPSPARSE_STATUS_ZERO_PIVOT
+#define dapi_bsric02Info_t bsric02Info_t
+#define dapi_bsrilu02Info_t bsrilu02Info_t
+#define dapi_bsrsv2Info_t bsrsv2Info_t
+#define dapi_csrgemm2Info_t csrgemm2Info_t
+#define dapi_csrilu02Info_t csrilu02Info_t
+#define dapi_csrsm2Info_t csrsm2Info_t
+#define dapi_csrsv2Info_t csrsv2Info_t
+#define dapi_csru2csrInfo csru2csrInfo
+#define dapi_csru2csrInfo_t csru2csrInfo_t
 #define dapi_cusparseAction_t hipsparseAction_t
 #define dapi_cusparseDiagType_t hipsparseDiagType_t
 #define dapi_cusparseDirection_t hipsparseDirection_t
@@ -635,6 +658,7 @@
 #define dapi_cusparseSpVecDescr_t hipsparseSpVecDescr_t
 #define dapi_cusparseSparseToDenseAlg_t hipsparseSparseToDenseAlg_t
 #define dapi_cusparseStatus_t hipsparseStatus_t
+#define dapi_pruneInfo_t pruneInfo_t
 #define dapi_cusparseCreate hipsparseCreate
 #define dapi_cusparseDestroy hipsparseDestroy
 #define dapi_cusparseGetPointerMode hipsparseGetPointerMode

@@ -5,6 +5,8 @@
 
 #ifdef DAPI_GPU_API_CUDA
 
+#include <cuda_runtime.h>
+#include <cuComplex.h>
 #define dapi_cuComplex cuComplex
 #define dapi_cuDoubleComplex cuDoubleComplex
 #define dapi_cuFloatComplex cuFloatComplex
@@ -37,6 +39,8 @@
 
 #ifdef DAPI_GPU_API_HIP
 
+#include <hip/hip_runtime.h>
+#include <hip_complex.h>
 #define dapi_cuComplex hipComplex
 #define dapi_cuDoubleComplex hipDoubleComplex
 #define dapi_cuFloatComplex hipFloatComplex
