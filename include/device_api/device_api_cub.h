@@ -13,7 +13,7 @@
 
 #ifdef DAPI_GPU_API_HIP
 
-#include <hipcub/hipcub.cuh>
+#include <hipcub/hipcub.hpp>
 #define dapi_cub hipcub
 
 #endif //DAPI_GPU_API_HIP
