@@ -26,12 +26,13 @@ endif()
 
 include(FetchContent)
 
-FetchContent_Declare(HIPIFY
+FetchContent_Declare(hipify
     GIT_REPOSITORY    https://github.com/ROCm-Developer-Tools/HIPIFY.git
 )
 
-if(NOT HIPIFY_POPULATED)
-    FetchContent_Populate(HIPIFY)
+FetchContent_GetProperties(hipify)
+if(NOT hipify_POPULATED)
+    FetchContent_Populate(hipify)
 endif()
 
 add_subdirectory(generator)
