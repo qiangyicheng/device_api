@@ -1,4 +1,4 @@
-//This file is generated from hipify-src/doc/markdown/CUDA_Device_API_supported_by_HIP.md with the restriction of <CUDA Ver.> <= 11.5 and <HIP Ver.> <= 4.3.0.
+//This file is generated from hipify-src/doc/markdown/CUDA_Device_API_supported_by_HIP.md with the restriction of <CUDA Ver.> <= 12.0 and <HIP Ver.> <= 5.4.0.
 //The prefix is selected as DAPI and its corresponding lower case.
 
 #pragma once
@@ -85,6 +85,10 @@
 #define dapi___frsqrt_rn __frsqrt_rn
 #define dapi___fsqrt_rn __fsqrt_rn
 #define dapi___fsub_rn __fsub_rn
+#define dapi___funnelshift_l __funnelshift_l
+#define dapi___funnelshift_lc __funnelshift_lc
+#define dapi___funnelshift_r __funnelshift_r
+#define dapi___funnelshift_rc __funnelshift_rc
 #define dapi___h2div __h2div
 #define dapi___habs __habs
 #define dapi___habs2 __habs2
@@ -591,6 +595,10 @@
 #define dapi___frsqrt_rn __frsqrt_rn
 #define dapi___fsqrt_rn __fsqrt_rn
 #define dapi___fsub_rn __fsub_rn
+#define dapi___funnelshift_l __funnelshift_l
+#define dapi___funnelshift_lc __funnelshift_lc
+#define dapi___funnelshift_r __funnelshift_r
+#define dapi___funnelshift_rc __funnelshift_rc
 #define dapi___h2div __h2div
 #define dapi___habs __habs
 #define dapi___habs2 __habs2

@@ -37,8 +37,8 @@ if(ENABLE_WOLFRAM_SCRIPT)
             ${CURRENT_GENERATOR_DIR}/${CURRENT_TARGET_NAME}.wls
             ${hipify_SOURCE_DIR}/doc/markdown
             ${CMAKE_CURRENT_SOURCE_DIR}
-            11.5
-            4.3.0
+            12.0
+            5.4.0
             DAPI
         DEPENDS 
             ${CURRENT_GENERATOR_DIR}/${CURRENT_TARGET_NAME}.wls
