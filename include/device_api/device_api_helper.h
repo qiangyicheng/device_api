@@ -5,6 +5,11 @@
 
 #ifdef DAPI_GPU_API_CUDA
 
+#ifdef __cuda_cuda_h__
+#ifndef CUDA_DRIVER_API
+#define CUDA_DRIVER_API
+#endif
+#endif
 #include <helper_cuda.h>
 #define dapi_checkCudaErrors checkCudaErrors
 
