@@ -13,7 +13,7 @@ FetchContent_MakeAvailable(googletest)
 if(CMAKE_CUDA_COMPILER)
     enable_testing()
 
-    find_package(CUDA REQUIRED)
+    check_language(CUDA)
     enable_language(CUDA)
 
     add_executable(
