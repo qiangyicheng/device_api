@@ -1,7 +1,7 @@
 include(FetchContent)
 
 FetchContent_Declare(wolfram_script_cmake
-    GIT_REPOSITORY    https://github.com/qiangyicheng/wolfram_script_cmake.git
+    GIT_REPOSITORY    git@github.com:qiangyicheng/wolfram_script_cmake.git
 )
 
 FetchContent_GetProperties(wolfram_script_cmake)

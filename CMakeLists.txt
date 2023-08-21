@@ -27,7 +27,7 @@ endif()
 include(FetchContent)
 
 FetchContent_Declare(hipify
-    GIT_REPOSITORY    https://github.com/ROCm-Developer-Tools/HIPIFY.git
+    GIT_REPOSITORY    git@github.com:ROCm-Developer-Tools/HIPIFY.git
 )
 
 FetchContent_GetProperties(hipify)
