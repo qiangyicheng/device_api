@@ -102,8 +102,8 @@
 #ifdef DAPI_GPU_API_HIP
 
 #include <hip/hip_runtime.h>
-#include <hipfft.h>
-#include <hipfftXt.h>
+#include <hipfft/hipfft.h>
+#include <hipfft/hipfftXt.h>
 #define DAPI_CUFFT_ALLOC_FAILED HIPFFT_ALLOC_FAILED
 #define DAPI_CUFFT_C2C HIPFFT_C2C
 #define DAPI_CUFFT_C2R HIPFFT_C2R
